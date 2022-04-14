@@ -13,7 +13,6 @@ const Content = styled.div`
 function About() {
   return (
     <Content>
-      <LongShadow />
     </Content>
   );
 }

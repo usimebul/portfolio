@@ -7,7 +7,7 @@ import { theme } from "./theme";
 import reset from "./Components/Reset";
 import { Global } from "@emotion/react";
 
-const container = document.getElementById("root");
+const container: HTMLElement = document.getElementById("root")!;
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
