@@ -28,7 +28,6 @@ function App() {
         <Router>
             <Navbar/>
             <Container>
-                <Tag>{"<body />"}</Tag>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/about' element={<About/>}/>
