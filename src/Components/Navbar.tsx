@@ -16,7 +16,7 @@ const Menu = styled.menu`
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   z-index: 3;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
