@@ -44,29 +44,26 @@ const list = {
 };
 
 function About() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  };
+
   return (
-    <Content>
-      <TextWrapper initial="hidden" animate="visible" variants={list}>
-        <Character custom={0} content={"H"} />
-        <Character custom={1} content={"i"} />
-        <Character custom={2} content={","} />
-        <Character custom={3} content={"H"} />
-        <Character custom={4} content={"i"} />
-        <Character custom={5} content={","} />
-        <Character custom={6} content={"H"} />
-        <Character custom={7} content={"i"} />
-        <Character custom={8} content={","} />
-        <Character custom={9} content={"H"} />
-        <Character custom={10} content={"i"} />
-        <Character custom={11} content={","} />
-        <Character custom={12} content={"H"} />
-        <Character custom={13} content={"i"} />
-        <Character custom={14} content={","} />
-        <Character custom={15} content={"H"} />
-        <Character custom={16} content={"i"} />
-        <Character custom={17} content={","} />
-      </TextWrapper>
-    </Content>
+    <motion.ul variants={container} initial="hidden" animate="show">
+      <motion.li variants={item} />
+      <motion.li variants={item} />
+    </motion.ul>
   );
 }
 

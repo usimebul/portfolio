@@ -29,8 +29,8 @@ function Character({ custom, content }: ICharacter) {
       scaleY: [1, 0.75, 1.25, 0.85, 1.05, 0.95, 1],
       transition: {
         times: [0, 0.3, 0.4, 0.5, 0.65, 0.75, 1],
-        repeat: 0,
-        delay: i * 0.2
+        repeat: 0
+        // delay: i * 0.15
       }
     }));
   });
