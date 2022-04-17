@@ -1,70 +1,50 @@
+import {Content, P, TextWrapper} from "../Components/UI";
+import Character from "../Components/Character";
+import {css} from "@emotion/react";
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
-import Character from "../Components/Home/Character";
 
-const Content = styled.div`
-  background-color: ${(props) => props.theme.backgroundColor.main};
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 9rem 3rem;
-`;
-
-const TextWrapper = styled(motion.h1)`
-  position: relative;
-  padding-left: 5rem;
-  font-family: "Raleway", sans-serif;
-  width: fit-content;
-
-  ::before,
-  ::after {
-    position: absolute;
-    font-size: 1.8rem;
-    font-family: "Dancing Script", cursive;
-    color: ${(props) => props.theme.textColor.tag};
-  }
-
-  ::before {
-    content: "<h1>";
-    top: -3rem;
-    left: 2rem;
-  }
-
-  ::after {
-    content: "</h1>";
-    bottom: -3rem;
-    right: -4rem;
-  }
-`;
-
-const list = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 }
-};
+const Text = styled.span`
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+`
 
 function About() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5
-      }
-    }
-  };
+    return (
+        <Content>
+            <TextWrapper>
+                <Character custom={0} content={"M"}/>
+                <Character custom={1} content={"y"}/>
+                <Character custom={2} content={",\u00A0"}/>
+                <Character custom={3} content={"M"}/>
+                <Character custom={4} content={"y"}/>
+                <Character custom={5} content={"s"}/>
+                <Character custom={6} content={"e"}/>
+                <Character custom={7} content={"l"}/>
+                <Character custom={8} content={"f\u00A0"}/>
+                <Character custom={9} content={"&\u00A0"}/>
+                <Character custom={10} content={"I"}/>
+            </TextWrapper>
 
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 }
-  };
-
-  return (
-    <motion.ul variants={container} initial="hidden" animate="show">
-      <motion.li variants={item} />
-      <motion.li variants={item} />
-    </motion.ul>
-  );
+            <P css={css`
+              color: white;
+              width: 50%;
+              min-width: 37em`
+            }>
+                <Text>I'm a Web Front-End Developer has experiences to develop cryptographic module, PKI solutions,
+                    and user authentication services. I'm aiming to be Front-End centric Full-Stack Developer and
+                    expanding my tech stack to server-side works (server, database, and infrastructure)</Text>
+                <Text>I'm a Logician (INTP), problem solver, challenger, and positive person. I like to watch TV shows,
+                    read genre literature, sing a song. I love the song of IU, Akdong Musician, Maktub, and Jeong
+                    Seung-hwan. I work out more than three times a week, but I don't like workout.
+                </Text>
+                <Text>I'm interested in UI design, effects, animations and creating intuitive, dynamic user
+                    experiences. </Text>
+            </P>
+        </Content>
+    );
 }
 
 export default About;
