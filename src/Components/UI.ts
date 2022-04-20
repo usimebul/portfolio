@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Content = styled.div`
   background-color: ${(props) => props.theme.backgroundColor.main};
@@ -29,7 +29,6 @@ const Content = styled.div`
     right: 4rem;
   }
 `;
-
 
 const TextWrapper = styled(motion.h1)`
   position: relative;
@@ -68,7 +67,6 @@ const P = styled(motion.p)`
   color: #8d8d8d;
   position: relative;
 
-
   ::before,
   ::after {
     position: absolute;
@@ -90,10 +88,12 @@ const P = styled(motion.p)`
   }
 `;
 
-export {
-    Content,
-    TextWrapper,
-    P
-}
+const Text = styled.span`
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+`;
 
-
+export { Content, TextWrapper, Text, P };
