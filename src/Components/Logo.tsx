@@ -109,11 +109,11 @@ function Logo() {
                     const pixelPosition = (j + i * this.bgContextPixelData.width) * 4;
 
                     // Don't use whitish pixels
-                    if (colors[pixelPosition] > 200 && (colors[pixelPosition + 1]) > 200 && (colors[pixelPosition + 2]) > 200 || colors[pixelPosition + 3] === 0) {
+                    if (((colors[pixelPosition] > 200 && (colors[pixelPosition + 1]) > 200 && (colors[pixelPosition + 2]) > 200)) || colors[pixelPosition + 3] === 0) {
                         continue;
                     }
 
-                    const color = 'rgba(' + colors[pixelPosition] + ',' + colors[pixelPosition + 1] + ',' + colors[pixelPosition + 2] + ',' + '1)';
+                    const color = 'rgba(' + colors[pixelPosition] + ',' + colors[pixelPosition + 1] + ',' + colors[pixelPosition + 2] + ',1)';
                     this.points.push({x: j, y: i, originalX: j, originalY: i, color: color});
 
                 }

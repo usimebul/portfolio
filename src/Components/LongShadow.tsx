@@ -122,7 +122,7 @@ function LongShadow() {
             }
 
             for (let i = points.length - 1; i >= 0; i--) {
-                let n = i == 3 ? 0 : i + 1;
+                let n = i === 3 ? 0 : i + 1;
                 this.context!.beginPath();
                 this.context!.moveTo(points[i].startX, points[i].startY);
                 this.context!.lineTo(points[n].startX, points[n].startY);
@@ -142,7 +142,7 @@ function LongShadow() {
 
     function collisionDetection(b: number) {
         for (let i = boxes.length - 1; i >= 0; i--) {
-            if (i != b) {
+            if (i !== b) {
                 let dx =
                     boxes[b].x + boxes[b].halfSize - (boxes[i].x + boxes[i].halfSize);
                 let dy =
@@ -215,9 +215,9 @@ function LongShadow() {
         canvas.current!.height = box.height;
     }
 
-    window.onresize = resize;
 
     useEffect(() => {
+        window.onresize = resize;
         context = canvas.current!.getContext("2d");
         canvas.current!.onmousemove = function (e: MouseEvent) {
             light.x = e.offsetX;

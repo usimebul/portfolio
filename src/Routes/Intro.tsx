@@ -1,8 +1,8 @@
 import Character from "../Components/Character";
-import {Fragment} from "react";
 import LongShadow from "../Components/LongShadow";
-import {Content, P, TextWrapper} from "../Components/UI";
 import {css} from "@emotion/react";
+import {Content, Section, TextWrapper} from '../StyledComponents/Layout'
+import {P} from '../StyledComponents/Component'
 
 const list = {
     visible: {
@@ -13,9 +13,9 @@ const list = {
 
 function Intro() {
     return (
-        <Fragment>
-            <LongShadow/>
-            <Content>
+        <Content>
+            <Section>
+                <LongShadow/>
                 <TextWrapper
                     initial="hidden"
                     animate="visible"
@@ -57,8 +57,9 @@ function Intro() {
                 >
                     Front End Developer / PKI Expert
                 </P>
-            </Content>
-        </Fragment>
+            </Section>
+            <Section/>
+        </Content>
     );
 }
 

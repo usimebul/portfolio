@@ -13,16 +13,6 @@ const Container = styled.div`
   position: relative;
 `
 
-const Tag = styled.div`
-  position: absolute;
-  top: 2rem;
-  left: 4rem;
-  bottom: auto;
-  font-size: 1.8rem;
-  font-family: 'Dancing Script', cursive;
-  color: ${props => props.theme.textColor.tag};
-`
-
 function App() {
     return (
         <Router>
