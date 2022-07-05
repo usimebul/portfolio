@@ -1,7 +1,7 @@
 import {P, Text} from "../StyledComponents/Component";
 import {Content, TextWrapper, Section} from "../StyledComponents/Layout";
 import Character from "../Components/Character";
-import {css} from "@emotion/react";
+import { css } from "@emotion/react";
 
 function Skills() {
     return (
