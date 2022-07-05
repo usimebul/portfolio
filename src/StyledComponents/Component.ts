@@ -34,14 +34,6 @@ export const P = styled(motion.p)`
   }
 `;
 
-export const Span = styled.span`
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-`
-
 
 export const Text = styled.span`
   display: block;
