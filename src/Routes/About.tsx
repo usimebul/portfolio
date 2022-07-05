@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import React, {Suspense, useRef, useState} from 'react'
 import {Canvas, useFrame, useLoader} from '@react-three/fiber'
 import {FBXLoader} from "three/examples/jsm/loaders/FBXLoader";
-import {Html, useProgress, OrbitControls} from '@react-three/drei'
+import {Html, OrbitControls, useProgress} from '@react-three/drei'
 
 function Loader() {
     const {progress} = useProgress()
@@ -18,16 +18,16 @@ function Scene() {
     const object = useLoader(FBXLoader, "hello.fbx");
     let mixer = new THREE.AnimationMixer(object)
     let clips = object.animations;
-    clips.forEach( function ( clip ) {
-        mixer.clipAction( clip ).play();
-    } );
+    clips.forEach(function (clip) {
+        mixer.clipAction(clip).play();
+    });
 
-    return <primitive object={object} scale={0.02} position={{x:0, y:0, z:0}}/>;
+    return <primitive object={object} scale={0.02} position={{x: 0, y: 0, z: 0}}/>;
 }
 
 function MyAnimatedBox() {
     const myMesh = React.useRef<THREE.Mesh>()
-    useFrame(({ clock }) => {
+    useFrame(({clock}) => {
         myMesh.current!.rotation.x = clock.getElapsedTime()
     })
     return (
