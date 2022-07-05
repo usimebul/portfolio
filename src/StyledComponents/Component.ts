@@ -48,5 +48,5 @@ export const Text = styled.span`
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0;
-  margin-inline-end: 0;`
-
+  margin-inline-end: 0;
+`

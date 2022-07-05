@@ -14,8 +14,8 @@ const list = {
 function Intro() {
     return (
         <Content>
+            <LongShadow/>
             <Section>
-                <LongShadow/>
                 <TextWrapper
                     initial="hidden"
                     animate="visible"

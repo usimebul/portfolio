@@ -1,13 +1,13 @@
 import Character from "../Components/Character";
 import {css} from "@emotion/react";
 import {Content, Section, TextWrapper} from "../StyledComponents/Layout";
-import {P, Span} from "../StyledComponents/Component";
+import {P, Text} from "../StyledComponents/Component";
 
 import * as THREE from 'three'
-import React, {Suspense, useRef, useState} from 'react'
-import {Canvas, useFrame, useLoader} from '@react-three/fiber'
+import React, {useRef, useState} from 'react'
+import {useFrame, useLoader} from '@react-three/fiber'
 import {FBXLoader} from "three/examples/jsm/loaders/FBXLoader";
-import {Html, OrbitControls, useProgress} from '@react-three/drei'
+import {Html, useProgress} from '@react-three/drei'
 
 function Loader() {
     const {progress} = useProgress()
@@ -103,6 +103,7 @@ function About() {
                     </Text>
                 </P>
             </Section>
+            <Section/>
         </Content>
     );
 }
