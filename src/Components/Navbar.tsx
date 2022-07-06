@@ -159,11 +159,6 @@ function Navbar() {
             Skills
           </motion.div>
         </NavItem>
-        <NavItem to="/work">
-          <motion.div whileHover={{ color: theme.textColor.highlight }}>
-            Work
-          </motion.div>
-        </NavItem>
         <NavItem to="/contact">
           <motion.div whileHover={{ color: theme.textColor.highlight }}>
             Contact

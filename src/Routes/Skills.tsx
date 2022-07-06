@@ -1,7 +1,7 @@
 import {P, Text} from "../StyledComponents/Component";
 import {Content, TextWrapper, Section} from "../StyledComponents/Layout";
 import Character from "../Components/Character";
-import { css } from "@emotion/react";
+import {css} from "@emotion/react";
 
 function Skills() {
     return (
@@ -61,6 +61,24 @@ function Skills() {
                     </Text>
                 </P>
             </Section>
+            <div>
+                <div>Front-end</div>
+                <div>
+                    <div>
+                        <div>Basics</div>
+                        <div>HTML, Javascript, CSS, Browsers, Web Accessibility, Web Security
+                        </div>
+                        <div>High</div>
+                    </div>
+                    <div>
+                        <div>Framework and Libraries</div>
+                        <div>React, React Native, Next.js, Styled Component, Emotion, Framer Motion, Threejs,
+                            Babel, Webpack, Javascript Obfausctsor, forge
+                        </div>
+                        <div>Medium</div>
+                    </div>
+                </div>
+            </div>
             <Section/>
 
 

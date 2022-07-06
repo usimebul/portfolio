@@ -4,7 +4,6 @@ import Home from './Routes/Home';
 import About from './Routes/About';
 import Skills from './Routes/Skills';
 import Contact from './Routes/Contact';
-import Work from "./Routes/Work";
 import Navbar from "./Components/Navbar";
 import styled from "@emotion/styled";
 
@@ -21,8 +20,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/about' element={<About/>}/>
-                    <Route path='/skills' element={<Skills/>}/>
-                    <Route path='/work' element={<Work/>}/>
+                    <Route path='/skills' element={<Skills/>}/>\
                     <Route path='/contact' element={<Contact/>}/>
                 </Routes>
             </Container>
