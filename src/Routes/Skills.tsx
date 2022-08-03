@@ -151,6 +151,10 @@ function Skills() {
                                     }}/>
                             </LevelIndicatorWrapper>
                         </SkillItem>
+                        <SkillItem>
+                            <SkillItemHeader>
+                            </SkillItemHeader>
+                        </SkillItem>
                     </SkillSectionBody>
                 </SkillSection>
                 <SkillSection></SkillSection>
