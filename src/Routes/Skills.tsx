@@ -4,6 +4,7 @@ import Character from "../Components/Character";
 import {css} from "@emotion/react";
 import styled from "@emotion/styled";
 import {motion} from "framer-motion";
+import Item from "./Skills/Item";
 
 const SkillSection = styled.div`
   flex: 1;
@@ -119,45 +120,22 @@ function Skills() {
                 <SkillSection>
                     <SkillSectionHeader>Front-end</SkillSectionHeader>
                     <SkillSectionBody>
-                        <SkillItem>
-                            <SkillItemHeader>Basics</SkillItemHeader>
-                            <SkillItemDetail>Internet and Browsers Mechanism, HTML(Semantic HTML, SEO,
-                                Accessibility, Web Components), Javascript(Fetch API/Ajax, DOM manipulation, Event
-                                Handling), CSS(Layouts(display, position, flex, grid), Animation, Responsive UI)
-                            </SkillItemDetail>
-                            <LevelIndicatorWrapper>
-                                <LevelIndicator
-                                    animate={{
-                                        width: "90%"
-                                    }}
-                                    transition={{
-                                        duration: 0.6
-                                    }}/>
-                            </LevelIndicatorWrapper>
-                        </SkillItem>
-                        <SkillItem>
-                            <SkillItemHeader>Frameworks and Libraries</SkillItemHeader>
-                            <SkillItemDetail>React, React Native, Next.js, Styled Component, Emotion, Framer Motion,
-                                Threejs,
-                                Babel, Webpack, Javascript Obfausctsor, forge.js
-                            </SkillItemDetail>
-                            <LevelIndicatorWrapper>
-                                <LevelIndicator
-                                    animate={{
-                                        width: "60%"
-                                    }}
-                                    transition={{
-                                        duration: 0.6
-                                    }}/>
-                            </LevelIndicatorWrapper>
-                        </SkillItem>
-                        <SkillItem>
-                            <SkillItemHeader>
-                            </SkillItemHeader>
-                        </SkillItem>
+                        <Item header={'Basics'} detail={`Internet and Browsers Mechanism, HTML(Semantic HTML, SEO, 
+                            '                Accessibility, Web Components), Javascript(Fetch API/Ajax, DOM manipulation, Event
+                            '                Handling), CSS(Layouts(display, position, flex, grid), Animation, Responsive UI)`} level={'90%'} />
+                        <Item header={'Frameworks and Libraries'} detail={`React, React Native, Next.js, Emotion, Framer Motion,
+                            Threejs, Recoil, Babel, Webpack, Javascript Obfausctsor, forge.js`} level={'60%'} />
+                        <Item header={'Advanced'} detail={`WebAssembly, Web Auth, WebRTC, WebGL`} level={'60%'} />
                     </SkillSectionBody>
                 </SkillSection>
-                <SkillSection></SkillSection>
+                <SkillSection>
+                    <SkillSectionHeader>Back-end</SkillSectionHeader>
+                    <SkillSectionBody>
+                        <Item header={'Basics'} detail={`Internet, Socket Communication, HTTP/HTTPS, SSL/TLS, CORS, Relational Database`} level={'90%'} />
+                        <Item header={'Frameworks'} detail={`Spring, Spring Boot`} level={'60%'} />
+                        <Item header={'Advanced'} detail={`WebAssembly, Web Auth, WebRTC, WebGL`} level={'60%'} />
+                    </SkillSectionBody>
+                </SkillSection>
             </Section>
         </Content>
     );
